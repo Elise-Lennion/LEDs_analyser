@@ -5,7 +5,7 @@ import sys
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QVBoxLayout, QAction, qApp,
-                            QHBoxLayout, QMessageBox, QWidget, QPushButton)
+    QHBoxLayout, QMessageBox, QWidget, QPushButton)
 
 from GUI.mpl_canvas import MplCanvas
 from GUI.paths_list import PathsListView
@@ -20,7 +20,7 @@ class AppForm(QMainWindow):
     def __init__(self, parent=None):
 
         QMainWindow.__init__(self, parent)
-        self.setWindowTitle('LUNA')
+        self.setWindowTitle('Sapphire')
         self.create_main_frame()
 
     def create_main_frame(self):
@@ -160,6 +160,9 @@ class AppForm(QMainWindow):
                           representa a relacao entre os dados nos eixos.
                           Apos tracar a reta compare os valores obtidos com
                           os valores previstos pela reta.
+
+                          This description is outdated.
+                          Read analyser.py for shortcuts and try it yourself :)
                           ''')
 
     def set_san_values(self, values):

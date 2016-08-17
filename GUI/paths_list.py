@@ -3,12 +3,13 @@ from PyQt5.QtCore import QStringListModel, QModelIndex, QItemSelectionModel, Qt
 from PyQt5.QtWidgets import QListView
 
 FILES_PATH = "/".join(
-    os.path.join(os.path.dirname(os.path.abspath(__file__)).split('/')[:-1])) + '/data/'
+    os.path.join(
+        os.path.dirname(os.path.abspath(__file__)).split('/')[:-1])) + '/data/'
 
 
 class PathsListView(QListView):
 
-    """List all .csv files contained in the folder '../dados/'"""
+    """List all .csv files contained in the folder '../data/'"""
 
     def __init__(self, parent=None):
 
@@ -54,8 +55,8 @@ class PathsListView(QListView):
         Inca se they aren't change them to default [1, 1]
         """
 
-        values = [int(s)
-                  for s in index.data().replace('.', '_').split('_') if s.isdigit()][2:]
+        values = [int(s) for s in index.data().replace(
+            '.', '_').split('_') if s.isdigit()][2:]
 
         if len(values) != 2:
             values = [1, 1]
