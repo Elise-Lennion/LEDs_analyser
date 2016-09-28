@@ -3,7 +3,6 @@ from PyQt5.QtWidgets import QVBoxLayout, QHBoxLayout, QWidget, QCheckBox
 
 
 class Axis:
-
     """
     Axis determines which values will be retrieved from the data file
 
@@ -258,3 +257,6 @@ class XAxis(QWidget, Axis):
 
         # Initial State
         self._cb_pos.setChecked(True)
+
+if __name__ == '__main__':
+    pass

@@ -5,12 +5,12 @@ import sys
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QVBoxLayout, QAction, qApp,
-    QHBoxLayout, QMessageBox, QWidget, QPushButton)
+                            QHBoxLayout, QMessageBox, QWidget, QPushButton)
 
-from GUI.mpl_canvas import MplCanvas
-from GUI.paths_list import PathsListView
-from GUI.axis import XAxis, YAxis
-from GUI.misc_menu import MiscMenu
+from cagi.mpl_canvas import MplCanvas
+from cagi.paths_list import PathsListView
+from cagi.axis import XAxis, YAxis
+from cagi.misc_menu import MiscMenu
 
 
 class AppForm(QMainWindow):
@@ -20,7 +20,7 @@ class AppForm(QMainWindow):
     def __init__(self, parent=None):
 
         QMainWindow.__init__(self, parent)
-        self.setWindowTitle('Sapphire')
+        self.setWindowTitle('Curves Analysis Graphic Interface')
         self.create_main_frame()
 
     def create_main_frame(self):
@@ -149,20 +149,15 @@ class AppForm(QMainWindow):
 
         QMessageBox.about(self._main_frame, 'About',
                           '''
-                          Aplicativo de analise de dados.
+                          Data analysis application.
 
-                          Escolha o arquivo .csv que contem os dados,
-                          selecione quais variaveis os eixos X e Y representam,
-                          plote os dados.
+                          Choose the csv file which contains the data,
+                          select what information X and Y axis represent,
+                          plot the data.
 
-                          Se necessario remova dados nao uteis.
-                          Faca o fit linear para tracar uma reta que melhor
-                          representa a relacao entre os dados nos eixos.
-                          Apos tracar a reta compare os valores obtidos com
-                          os valores previstos pela reta.
-
-                          This description is outdated.
-                          Read analyser.py for shortcuts and try it yourself :)
+                          If necessary, remove non-useful data points.
+                          Fit the best line to interpret the data.
+                          Calculate the standard deviation of values, and compare them to the predicted values.
                           ''')
 
     def set_san_values(self, values):

@@ -19,7 +19,6 @@ OUTLIERS_RATIO = 15
 
 
 class MplCanvas(FigureCanvas):
-
     """MatPlotLib Canvas is where data is plot and analyzed. It's a QWidget that contains a Canvas and
         useful methods for data analysis.
 
@@ -570,3 +569,6 @@ class MplCanvas(FigureCanvas):
             return 'tempo (s)'
 
         return self._headers[ind[0]] + ' (px)'
+
+if __name__ == '__main__':
+    pass

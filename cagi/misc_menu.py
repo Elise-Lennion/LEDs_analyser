@@ -3,11 +3,10 @@ from PyQt5.QtWidgets import QLineEdit
 
 
 class MiscMenu(QLineEdit):
-
     """
     Miscellaneous menu contains step and number values
 
-    Step represents the difference in micrometers between data poinst
+    Step represents the difference in micrometers between data points
     Number represents the number of data points used in each measn
     """
 
@@ -18,7 +17,7 @@ class MiscMenu(QLineEdit):
 
         self.setMaxLength(10)
         self.setText('1 | 1')
-        self.setFixedWidth(110)  # Aproximadamente o tamanho maximo do texto
+        self.setFixedWidth(110)
         self.setAlignment(Qt.AlignHCenter)
         self.setPlaceholderText('step | num')
 
