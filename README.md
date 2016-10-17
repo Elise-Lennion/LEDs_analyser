@@ -2,7 +2,7 @@
 
 Analyser for data acquired from camera about position of LEDs
 
-This software is used as auxiliar in a project I'm currently developing.
+This software is used as auxiliary in a project I'm currently developing.
 
 **Not many details will be given so the project itself isn't exploited.**
 
